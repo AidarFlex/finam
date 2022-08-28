@@ -9,14 +9,16 @@ class CurrentPost extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(postInfo.postData.title)),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            Text('Количество плюсов: ${postInfo.postData.ups}'),
-            const SizedBox(height: 10),
-            Text(postInfo.postData.selftext),
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              Text('Количество плюсов: ${postInfo.postData.ups}'),
+              const SizedBox(height: 10),
+              Text(postInfo.postData.selftext),
+            ],
+          ),
         ),
       ),
     );
